@@ -1,0 +1,128 @@
+{{!< default}}
+
+<div class='tracker-headline text-center'>
+    <h2 class='subhead'>Coronavirus in Kentucky</h2>
+    <div class='byline'> <a href='https://wfpl.org/author/sbhat/' target="_blank">Suhail Bhat</a></div>
+</div>
+{{!-- {{>story/stateTable}} --}}
+
+<div class='story-body'>
+    <p class="body-text">We are tracking the spread of COVID-19 cases, deaths and hospitalizations in Kentucky using reports published by the Centers for Disease Control and Prevention and Kentucky Department of Health.</p>
+</div>
+{{!-- {{>story/stateTable}} --}}
+
+</br>
+</br>
+{{> story/covidMap}}
+</br>
+</br>
+<hr>
+<div class='section-head text-center'>
+    <h2 id='cases-headline'>Positive Cases</h2>
+</div>
+<div class='story-body'>
+    <p class="body-text">The daily number of cases per 100,000 people - incidence rate - indicate the progression of virus spread and can be used to find hot spots. However, it should be read in conjunction with other indicators as one metric alone can’t present the true picture of the spread level. Seven-day moving averages reduce variations in data and present a clearer picture of the spread.</p>
+</div>
+{{> story/dailyCases}}
+</br>  
+<div class='section-head text-center'>
+    <h2 id='positivity-headline'>Positivity Rate</h2>
+</div>
+<div class='story-body'>
+    <p class="body-text">Positivity rate is defined as the percent of total tests that are positive. We calculated the seven-day average positivity rate by dividing average positive viral tests by total viral tests.
+   </p>
+</div>
+{{> story/positivity}}
+</br>  
+<div class='section-head text-center'>
+    <h2 id='deaths-headline'>Deaths</h2>
+</div>
+<div class='story-body'>
+    <p class="body-text">Deaths include confirmed deaths as well as those in which the death certificate mentions COVID-19 or equivalent as cause of death. The ratio of deaths and cases shows the number of deaths as a proportion of positive cases. The initial death counts are often incomplete and it might take from days to weeks to confirm the cause of death.  <br>
+    The chart below uses data obtained by <a href='https://wfpl.org/when-ky-governor-announced-restrictions-covid-backlog-had-been-building-for-months/' target="_blank">WFPL News</a> through records request. The state had a backlog of hundreds of deaths that surfaced in a statewide review of death certificates. The chart below shows deaths by date mentioned on death certificates.
+   </p>
+</div>
+{{> story/Deaths}}
+<hr>
+<div class='section-head text-center'>
+    <h2 id='hospitalization-headline'>Hospitalizations and Hospital Occupancy</h2>
+</div>
+<div class='story-body'>
+    <p class="body-text">The charts below show the number of people currently hospitalized, in intensive care units and on ventilators. A rise in cases in December put <a href='https://ohiovalleyresource.org/2020/12/15/ohio-valley-hospitals-filling-up-thanks-to-covid-19-surge/' target="_blank">hospitals under strain</a> with several running short of bed space. 
+   </p>
+</div>
+{{> story/hospitalization}}
+<hr>
+{{> story/hospitalcapacityTable}}
+{{!-- <hr>
+<div class='section-head text-center'>
+    <h2 id='casesbyrace-headline'>Total cases and deaths per 100,000 people by race</h2>
+</div>
+<div class='story-body'>
+    <p class="body-text">COVID-19 is <a href='https://covidtracking.com/race'>disproportionately affecting people of color</a> with Black people dying at a higher rate than white people - unveiling health disparities between racial and ethnic groups in the country.  
+   </p>
+</div>
+{{> story/casesbyrace}} --}}
+<hr>
+<div class='section-head text-center'>
+    <h2 id='testing-headline'>Testing</h2>
+</div>
+{{> story/Testing}}
+</br>  
+</br>  
+</br>  
+<hr>
+<div>
+    <div class='section-head text-center'>
+        <h2>About the data</h2>
+    </div>
+<div class='story-body' style='max-width:800px;background-color:#f1f1f1; padding-left:30px;padding-bottom:10px; padding-right:10px; padding-top:10px;'>
+    <div class="body-text" style='font-size:14px; line-height:1.5; color:grey'>
+        <h4>Sources</h4>
+
+        <p>
+        This page uses data from the CDC and Kentucky Department of Public Health. The county-level map is based on the community profile report <a href='https://beta.healthdata.gov/National/COVID-19-Community-Profile-Report/gqxm-d9w9' target="_blank"> published by the Centers for Disease Control and Prevention</a>. This data is a day late but it is the most comprehensive source of COVID-19 data publicly available. The federal government designs its recommendations and guidelines based on this data. However, not all counties report numbers regularly resulting in a lot of empty entries. We have tried our best to remove those entries and present as much data as we could. 
+        </p>
+
+        <p>Kentucky Department of Public Health publishes its <a href='https://govstatus.egov.com/kycovid19' target="_blank">reports</a> daily at around 4 pm. The state doesn't have a database, but we have created one using the daily reports published on the website.</p>
+
+        <h4>Notes</h4>
+        <p>
+           Due to wild variations in the positivity rate and testing data, we presented seven-day averages to make these charts readable.
+
+            The state started to publish 'patients on ventilators' data since November. That is why the chart related to that data starts around mid-November.
+
+            The charts related to race is based on the Census Bureau definitions. The Census Bureau divides population into Black, White, American Indian and Alaska Native, Asian, Pacific Islanders and Multiracial.  
+        </p>
+          <p>
+           Reporting by <a href='https://wfpl.org/author/sbhat/' target="_blank">Suhail Bhat</a>
+        </p>
+
+
+        <h4>Resources and Recommendations</h4>
+        <p>
+        <span><a href='https://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-during-covid19.html' target="_blank">CDC recommendations:</a></span></br>  
+        </br>  
+        Take steps to slow the spread of COVID-19. Wear a mask, stay at least 6 feet apart, avoid crowds, and wash your hands often. The more steps you take, the more you are protected against COVID-19.
+        </p>
+        <p> Travel can increase your chance of spreading and getting COVID-19. Postponing travel and staying home is the best way to protect yourself and others from COVID-19.</p>
+        <p> Consider getting tested with a viral test 3–5 days after your trip and reduce non-essential activities for a full 7 days after travel, even if your test is negative. If you don’t get tested, consider reducing non-essential activities for 10 days.</p>
+        <p>If your test is positive, isolate yourself to protect others from getting infected.</p>
+        <p> Testing locations <a href='https://govstatus.egov.com/ky-covid-testing' target="_blank"> here.</a></p>
+        <p> COVID-19 vaccine resources <a href='https://www.cdc.gov/coronavirus/2019-ncov/vaccines/index.html' target="_blank"> here.</a></p>
+        <p> Kentucky vaccine resources <a href='https://govstatus.egov.com/ky-covid-vaccine' target="_blank"> here.</a></p>
+        <p> Kentucky Public Health resources <a href='https://govstatus.egov.com/kycovid19' target="_blank"> here.</a></p>
+    </div>
+</div>
+        
+
+</div>
+
+
+
+
+
+
+
+
+

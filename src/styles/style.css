@@ -1,0 +1,677 @@
+body {
+    margin:auto;
+    /* padding:10px 10px; */
+    font-family: 'ProximaNova-Light', Georgia, serif;
+}
+
+img {
+    max-width: 100%;
+}
+.serif{
+    font-family: 'Proxima Nova', serif;
+}
+
+.Georgia{
+    font-family: 'Proxima Nova', Georgia;
+}
+/* choose a light or dark theme to add to the body tag. */
+.dark-theme {
+    background-color: #151515;
+    color: #fbfbfb;
+}
+.light-theme {
+    background-color: white;
+    color: black;
+}
+
+.header {
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.story-body, .header, .chart-section, .footer {
+    margin:auto;
+    max-width: 640px;
+    font-family: 'ProximaNova-Light', Georgia, serif;
+
+}
+
+.footer {
+  padding-top:20px;
+  padding-bottom:20px;
+  font-size:11px;
+  margin-left:50px;
+}
+
+.chart-section.wide{
+  width:100%;
+  max-width:1200px;
+}
+
+.chart-section.wide p.chart-title {
+  width:100%;
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.chart-section.wide p.chart-subhead {
+  width:100%;
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+}
+/* headline styles */
+
+h1.headline {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+  margin-top: 0rem;
+  font-weight: 800;
+}
+
+.headline-text {
+  margin-bottom: 1.1rem;
+  margin-top:1rem;
+  text-align:center;
+}
+
+h2.subhead {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+  margin-top: 0rem;
+  font-weight: 600;
+}
+
+.subhead-text {
+  margin-bottom:1rem;
+  text-align:center;
+  max-width:700px;
+  margin:0px;
+}
+
+p.body-text {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  margin-top:0;
+  margin-bottom:15px;
+  font-family: 'ProximaNova-Light', Georgia, serif;
+
+}
+
+h3.section-head {
+  font-size:1.8rem;
+  margin:auto;
+  font-weight:700;
+  padding-bottom: 0px;
+  padding-top:0px;
+
+}
+
+.byline {
+  font-size: 1.2rem;
+  line-height: 0.75;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.date {
+  font-size: 0.85rem;
+  line-height: 1;
+  margin-top: 10px;
+  font-weight:400;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+}
+
+
+p.note {
+  font-size:12px;
+  font-family: inherit;
+}
+
+
+/* text styles */
+
+.text-center {
+  text-align:center;
+}
+
+/* chart styles */
+
+.chart-section {
+  width:100%;
+  max-width:1200px;
+  padding:20px 0px;
+}
+
+.story-body .chart-section {
+  padding-top:0px;
+}
+
+
+.chart-row {
+  display:flex;
+  justify-content: space-between;
+  margin-top:20px;
+}
+
+p.chart-title {
+  font-size:1.3rem;
+  font-weight:700;
+  max-width:700px;
+  margin:0px auto 5px auto;
+}
+p.chart-subhead {
+  margin:0 auto;
+  max-width:700px;
+  font-size:1rem;
+  margin-bottom:15px;
+}
+
+p.chart-label {
+  margin:0 0 5px 0;
+  font-size:0.85rem;
+  text-transform:uppercase;
+  font-weight:600;
+}
+
+.chart-row .chart {
+  width:100%;
+  padding-right:15px;
+  min-width:calc(25% - 15px);
+
+}
+
+/* creating two split columns */
+* {
+    box-sizing: border-box;
+
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  .column {
+    float: left;
+    padding:10px;
+
+  }
+  
+  .left {
+    width: 50%;
+  }
+  
+  .right {
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  @media screen and (max-width: 760px) {
+    .column {
+      width: 100%;
+      padding:0px;
+    }
+  }
+
+/* map style  starts here*/
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding: 0 0 80% 0;
+    margin:auto;
+    
+}
+
+
+@media (min-width: 760px) {
+    .map-container {
+      padding: 0 0 60% 0;
+    }
+  }
+
+#map {
+    position: absolute; top: 0; bottom: 0; width: 100%;
+
+}
+
+
+.mapboxgl-canvas.hover {
+    cursor: pointer;
+  }
+  
+  .mapboxgl-canvas {
+    outline: none;
+  }
+/* popup style */
+
+.mapboxgl-popup {
+    font-size:14px;
+    position: relative;
+    overflow: scroll;
+
+}
+
+.mapboxgl-popup-content {
+    overflow-y: scroll;
+    color:rgba(10, 9, 9, 0.938);
+    background-color:white;
+    margin-right:20px;
+    border: 2px solid rgba(10, 9, 9, 0.938);
+
+
+
+    /* margin:auto; */
+    }
+
+
+/* /////Toggle layers/// */
+#layers-toggled {
+    overflow: hidden;
+    margin-bottom: 10px;
+    display: -ms-flexbox;
+    display: inline-flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  #layers-toggled a {
+    font-size: 16px;
+    color: grey;
+    line-height: 15px;
+    font-weight: bold;
+    background-color:#f7f0f0;
+    display: inline-block;
+    margin: 0px;
+    padding: 10px;
+    border: 0.5px solid white;
+    text-align: center;
+    border: 1px solid slateblue;
+    text-decoration: none;
+    }
+        
+    #layers-toggled a:hover {
+        background:black;
+        color:white;
+    }
+    #layers-toggled a.active {
+        background:rgb(226, 194, 194);
+        color:black;
+
+    }
+
+@media (max-width: 760px) {
+    #layers-toggled {
+      display: block;
+    }
+    #layers-toggled a {
+      padding: 6px;
+      font-size: 12px;
+
+
+    }
+  }
+        
+
+        
+
+.text-legend {
+        /* background-color: #fff; */
+        font: 12px/20px 'ProximaNova-Light', Georgia, serif;
+        padding: 10px;
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        }
+         
+    .text-legend h4 {
+        margin: 0 0 10px;
+        margin-bottom:5px;
+        font-size: 16px;
+        }
+         
+    .text-legend div span {
+        display: inline-block;
+        height: 10px;
+        margin-right: 2px;
+        width: 10px;
+        font-size: 12px;
+        }
+
+  .legend {
+      font: 12px/20px 'ProximaNova-Light', Georgia, serif;
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
+      width: 550px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      margin-top:10px;
+
+  }
+
+  .legend h4 {
+      margin: 0 0 0px;
+      margin-bottom:5px;
+      font-size: 16px;
+      }
+      
+  .legend div span {
+      display: inline-block;
+      height: 10px;
+      /* margin-right: 2px; */
+      width: 100%;
+      font-size: 12px;
+      }
+
+/* Map style ends here */
+
+/* ticks */
+.tick text {
+	font-size: 13px;
+	font-weight: 400;
+	color: #909090;
+}
+.tick line {
+    stroke: lightgray;
+}
+
+
+/* tooltip */
+
+#tooltip {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-family: inherit;
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
+	border-radius: 0.3rem;
+	color: $offblack;
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	padding: 0.2rem 0.4rem;
+	position: absolute;
+	white-space: pre;
+	max-width: 250px;
+	z-index: 300;
+	border: 1.5px lightgray solid;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px black;
+
+	div {
+		margin: 0;
+		padding: 0;
+	}
+	.row > * {
+		display: inline-block;
+	}
+	.bold {
+		font-weight: 600;
+	}
+}
+
+
+  .d3-tip {
+      line-height: 1;
+      font-weight: bold;
+      padding: 12px;
+      background: #f1f1f1;
+      color: grey;
+      border-radius: 2px;
+      pointer-events: none;
+    }
+    
+  /* Creates a small triangle extender for the tooltip */
+  .d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  pointer-events: none;
+  }
+  
+  /* Northward tooltips */
+  .d3-tip.n:after {
+  content: "\25BC";
+  margin: 1px 0 0 0;
+  top: 100%;
+  left: 0;
+  text-align: center;
+  }
+  
+  /* Eastward tooltips */
+  .d3-tip.e:after {
+  content: "\25C0";
+  margin: -4px 0 0 0;
+  top: 50%;
+  left: -8px;
+  }
+  
+  /* Southward tooltips */
+  .d3-tip.s:after {
+  content: "\25B2";
+  margin: 0 0 1px 0;
+  top: -8px;
+  left: 0;
+  text-align: center;
+  }
+  
+  /* Westward tooltips */
+  .d3-tip.w:after {
+  content: "\25B6";
+  margin: -4px 0 0 -1px;
+  top: 50%;
+  left: 100%;
+  }
+  
+/* TABLE STYLE */
+#embed-table {
+    border-collapse: collapse; 
+    margin:auto;
+    padding:20px;
+    max-width:750px;
+    position: relative;
+    overflow: scroll;
+    /* border: 0.1px solid grey; */
+    /* background-color:rgb(153, 145, 145); */
+    max-height: 740px;
+}
+
+#embed-table thead tr {
+    background-color:lightgrey;
+    color:rgba(15, 1, 1, 0.867);
+    font-size:11px;
+    border-collapse: collapse;
+
+}
+
+#embed-table th, #embed-table td {
+    padding: 6px 6px; 
+    border-bottom:  1px solid #cccccc;
+}
+
+#embed-table tbody tr {
+    border-bottom: 1px solid lightgray;
+    font-size:10px;
+    text-align: center;
+
+
+}
+
+#embed-table tbody .title {
+  text-align: left;
+  text-anchor: middle;
+}
+#embed-table thead .title {
+  text-align: left;
+  text-anchor: middle;
+}
+
+#embed-table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+
+}
+
+#embed-table tbody tr:last-of-type {
+    border-bottom: 2px solid slateblue;
+}
+
+#embed-table tbody tr:hover{
+    background-color:lightgrey;
+    color:white;
+}
+
+#embed-table th {
+    cursor:pointer;
+}
+
+#embed-table .tablesorter-headerDesc ::after{
+    content: "\25be";
+    margin-left:2px;
+    background-color: grey;
+}
+
+#embed-table .tablesorter-headerAsc ::after{
+    content: "\25b4";
+    margin-left:2px;
+    background-color: grey;
+}
+
+@media screen and (min-width: 400px) {
+    #embed-table thead tr {
+      font-size: 13px;
+    }
+    #embed-table tbody tr {
+        font-size: 12px;
+    }
+  }
+
+
+
+/* State table */
+
+/* TABLE STYLE */
+
+#vaccination-table {
+  border-collapse: collapse; 
+  margin:auto;
+  /* padding:10px; */
+  position: relative;
+  overflow: scroll;
+  max-width:460px;
+}
+
+#vaccination-table th, #vaccination-table td {
+  padding: 8px 8px; 
+  /* position: relative; */
+}
+
+#vaccination-table thead tr {
+  font-size:16px;
+  border-collapse: collapse;
+  text-align: center;
+
+}
+#vaccination-table tbody tr {
+  font-size:16px;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+
+  #vaccination-table{
+    width:340px;
+    padding:0px;
+  }
+  #vaccination-table thead tr {
+    font-size: 12px;
+  }
+  #vaccination-table tbody tr {
+      font-size: 14px;
+  }
+  #vaccination-table th, #vaccination-table td {
+    padding: 2px 2px; 
+  
+  }
+}
+#state-table{
+  border-collapse: collapse; 
+  margin:auto;
+  padding:20px;
+  position: flex;
+  overflow: scroll;
+  max-width:400px;
+}
+
+#state-table thead tr {
+  font-size:16px;
+  border-collapse: collapse;
+
+
+}
+
+#state-table th, #state-table td {
+  padding: 6px 6px; 
+  position: relative;
+  /* border-bottom:  1px solid #cccccc; */
+
+}
+
+#state-table tbody tr {
+  border-bottom: 1px solid lightgray;
+  font-size:18px;
+  text-align: center;
+
+
+}
+
+#state-table tbody .title {
+text-align: middle;
+text-anchor: middle;
+}
+#state-table thead .title {
+text-align: middle;
+text-anchor: middle;
+}
+
+#state-table th {
+  cursor:pointer;
+}
+
+.left-1, .left-2, .left-3, .left-4, .left-5, .left-6{
+  float: left;
+  padding:20 20 20 20;
+  width:33.33%;
+}
+
+@media screen and (max-width: 500px) {
+
+  .left-1, .left-2, .left-3, .left-4, .left-5, .left-6{
+    float: left;
+    padding:20 20 20 20;
+    width:50%;
+  }
+}

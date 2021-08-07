@@ -1,0 +1,58 @@
+
+<div class='legend-container'>
+    <nav id="layers-toggled"></nav>
+
+    <div id="map-keys">
+        <div id="Spread" class="text-legend" style="display: block">
+                <h4>Community spread level</h4>
+                <div>
+                    <span style="background-color: #bd0026"></span>Sustained hot spot
+                    <span style="background-color: #e31a1c"></span>Hot spot
+                    <span style="background-color: #fc4e2a"></span>High burden resolving
+                    <span style="background-color: #fd8d3c"></span>Moderate burden resolving
+                    <span style="background-color: #feb24c"></span>Emerging hot spot
+                    <span style="background-color: #fed976"></span>Moderate burden
+                    <span style="background-color: #ffffcc"></span>Low burden
+                </div>
+        </div>  
+        <div id='Hot spots' class="legend" style='display:none'>
+            <span id='hotspots'></span>
+        </div>
+        <div id='Positivity' class="legend" style='display:none'>
+            
+        </div>
+        <div id='Testing' class="legend" style='display:none'></div>
+        {{!-- <div id='Deaths' class="legend" style='display:none'></div> --}}
+
+    </div>
+</div>
+<p class='note' style='text-align:center;'> Hover or click to see details</p>
+
+
+<div class='map-container'>
+    <div id="map"></div>
+</div>
+<div class='story-body' style='background-color:lightgrey; padding-left:30px;padding-bottom:10px; padding-right:10px; padding-top:10px;border: 0.5px solid black'>
+    <p class="note"> Note: The federal government divides areas into seven categories that highlight different stages of the epidemic and can be used to identify areas with the highest growth. </p>
+    <p class="note" style="line-height:1.3;">
+    <span style="background-color: #bd0026;color:white;"> Sustained Hot spot</span>: High sustained case burden and higher risk for seeing resource limitations </br>
+    <span style="background-color: #e31a1c;color:white;"> Hot spot</span>: Reached a threshold of disease activity considered as being of high burden </br>
+    <span style="background-color: #fc4e2a;color:white;"> High Burden Resolving</span>: Recent hot spot and now improving </br>
+     <span style="background-color: #fd8d3c;color:white;"> Moderate Burden Resolving</span>: Moderate level of burden, but showing improvement</br>
+    <span style="background-color: #feb24c;"> Emerging Hot spot</span>: High likelihood to become hot spot within next week </br>
+    <span style="background-color: #fed976;"> Moderate Burden</span>: Moderate activity </br>
+    <span style="background-color: #ffffcc;"> Low Burden</span>: Minimal disease activity</br>
+   </p>
+</div>
+<p class='footer' style='margin-left: 10%;'>Source: Centers for Disease Control and Prevention</p>
+
+
+<script type="text/javascript" src="/scripts/county-map-tabs/covid-map.js"></script> 
+<script type="text/javascript" src="/scripts/county-map-tabs/hotspots-map.js"></script> 
+<script type="text/javascript" src="/scripts/county-map-tabs/tests-map.js"></script> 
+<script type="text/javascript" src="/scripts/county-map-tabs/positivity-map.js"></script> 
+{{!-- <script type="text/javascript" src="/scripts/county-map-tabs/deaths-map.js"></script>  --}}
+
+
+
+
